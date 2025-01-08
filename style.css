@@ -1,0 +1,697 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 16px;
+}
+/* Header Section */
+
+/* Container for logo and navigation */
+
+
+/* Logo Styling */
+.logo img {
+    width: 140px; /* Adjusted logo size */
+    height: 110px;
+}
+
+/* Call-to-Action Button */
+
+
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('assets/backgroundimages/earth_4k_8k-7680x4320.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    z-index: 1;
+    overflow: hidden;
+    background-attachment: fixed; /* Parallax Effect */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay to darken the background */
+    z-index: -1;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-cta-button {
+    background-color: #00d4ff;
+    color: #1a1a2e;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-cta-button:hover {
+    background-color: #fff;
+    color: #eb5c09;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-cta-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #f4f4f9;
+    padding: 60px 50px;
+}
+
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-us-left img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-us-left img:hover {
+    transform: scale(1.05);
+}
+
+.about-us-right {
+    max-width: 600px;
+}
+
+.about-us-right h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a2e;
+}
+
+.about-us-right p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about-us-cta-button {
+    background-color: #00d4ff;
+    color: #1a1a2e;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-us-cta-button:hover {
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us-right h2 {
+        font-size: 28px;
+    }
+
+    .about-us-right p {
+        font-size: 16px;
+    }
+}
+
+.banner {
+    width: 100%; /* Full width */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.banner-image {
+    width: 100%; /* Make the image full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+/* Services Overview Section */
+/* Section and container styles */
+.services-overview {
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.services-container h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Wrapper for the slider and buttons */
+.services-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slider for scrolling the service cards */
+.services-slider {
+    width: 80%; /* Show 4 boxes */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+/* Grid containing the service cards */
+.services-grid {
+    display: flex;
+    scroll-snap-align: start;
+    gap: 20px;
+}
+
+/* Service card styles */
+.service-card {
+    flex: 0 0 22%; /* Each box is 22% of container width */
+    max-width: 250px;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Background image for each service card */
+.service-bg {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-card h3,
+.service-card p,
+.service-card .service-link {
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+/* Link styles for the service cards */
+.service-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* Hover effect for each service card */
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lifts the card and slightly enlarges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+}
+
+/* Button styles for sliding */
+.slide-btn {
+    background-color: #bdc4cc;
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Left arrow button */
+.left-slide {
+    left: 0;
+}
+
+/* Right arrow button */
+.right-slide {
+    right: 0;
+}
+
+/* Hover state for slide buttons */
+.slide-btn:hover {
+    background-color: #9d9ea0;
+}
+
+/* Leadership Section */
+.leadership {
+    background-image: url('https://example.com/leadership-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 50px;
+    color: #000; /* Set default text color to black */
+    text-align: center;
+    background-attachment: fixed; /* Parallax Effect */
+}
+
+.leadership-container h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000; /* Headline color */
+    margin-bottom: 40px;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.leader-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly white background for better contrast */
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+.leader-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.leader-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000; /* Name color */
+}
+
+.leader-card h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #000; /* Position color */
+}
+
+.leader-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333; /* Bio color */
+}
+
+.leader-link {
+    color: #00d4ff; /* Link color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.leader-link:hover {
+    color: #000; /* Link hover color */
+}
+
+/* Hover Effect */
+.leader-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.leader-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .leadership-container h2 {
+        font-size: 28px;
+    }
+
+    .leader-card h3 {
+        font-size: 20px;
+    }
+
+    .leader-card h4 {
+        font-size: 16px;
+    }
+
+    .leader-card p {
+        font-size: 14px;
+    }
+}
+
+/* Why Choose Us Section */
+/* Section container */
+.why-choose-us {
+    padding: 20px;
+    text-align: center;
+}
+
+.why-container h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Grid layout for cards */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Card styles */
+.why-card {
+    position: relative;
+    width: 95%; /* Increase width */
+    max-width: 450px; /* Larger width for each card */
+    height: 350px; /* Larger height */
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    align-items: center; /* Center the text horizontally */
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center; /* Center text alignment */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Background image for 3rd box adjustment */
+.why-card[style*="interns.jpeg"] {
+    background-position: top; /* Adjust position to top for the 3rd box */
+}
+
+/* Overlay effect for readability */
+.why-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Text inside the card */
+.why-card h3,
+.why-card p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+.why-card h3 {
+    font-size: 1.5em; /* Slightly increase font size */
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    font-size: 1em;
+}
+
+/* Hover effect */
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-image: url('assets/backgroundimages/6383572.webp'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.cta-container {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+.cta-container h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease; /* Animation for the headline */
+}
+
+.cta-container p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #ddd;
+    animation: fadeInUp 1s ease; /* Animation for the paragraph */
+}
+
+.cta-button {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px 50px;
+    background-color: #00d4ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    animation: bounceIn 1.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Image Parallax Effect */
+.cta-section {
+    background-attachment: fixed; /* Parallax scrolling */
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-container h2 {
+        font-size: 30px;
+    }
+
+    .cta-container p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 20px;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background-color: #ffffff; /* Light grey background */
+    padding: 40px 20px;
+    color: #333;
+    text-align: center; 
+
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000; /* Title color */
+}
+
+.footer-column p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #eb5c09; /* Hover color */
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2); /* Hover animation on social icons */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column ul {
+        text-align: center;
+    }
+}

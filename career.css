@@ -1,0 +1,102 @@
+/* Contact Form Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Image Styling */
+.contact-form img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 2px solid #4caf50;
+}
+
+/* Form Title Styling */
+.contact-form .form-title {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+/* Input and Textarea Styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4caf50;
+}
+
+/* Textarea Styling */
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button Styling */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form .form-title {
+        font-size: 28px;
+    }
+}
